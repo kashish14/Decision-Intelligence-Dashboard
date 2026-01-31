@@ -1,0 +1,54 @@
+<div class="metric-create">
+  <header class="page-header">
+    <h2 class="page-title">Add outcome metric</h2>
+    <p class="page-subtitle">Define success metric and intended evolution for a decision.</p>
+  </header>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" class="form">
+    <div class="form-group">
+      <label for="decision">Decision</label>
+      <select id="decision" formControlName="decisionId" class="input">
+        <option value="">— Select decision —</option>
+        <option *ngFor="let d of decisions$ | async" [value]="d.id">{{ d.title }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Metric name</label>
+      <input id="name" type="text" formControlName="name" class="input" placeholder="e.g. Event coverage %" />
+    </div>
+
+    <div class="form-group">
+      <label for="desc">Description</label>
+      <textarea id="desc" formControlName="description" class="input textarea" rows="2" placeholder="Optional"></textarea>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="target">Target value</label>
+        <input id="target" type="number" formControlName="targetValue" class="input" placeholder="Optional" />
+      </div>
+      <div class="form-group">
+        <label for="unit">Unit</label>
+        <input id="unit" type="text" formControlName="unit" class="input" placeholder="e.g. %" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Intended evolution (date, value)</label>
+      <div formArrayName="intendedEvolution">
+        <div *ngFor="let c of intendedEvolution.controls; let i = index" [formGroupName]="i" class="point-row">
+          <input formControlName="date" type="date" class="input" />
+          <input formControlName="value" type="number" class="input num" />
+          <button type="button" class="btn btn-ghost" (click)="removePoint(i)" *ngIf="intendedEvolution.length > 2">Remove</button>
+        </div>
+        <button type="button" class="btn btn-ghost add" (click)="addPoint()">+ Add point</button>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" class="btn btn-ghost" (click)="cancel()">Cancel</button>
+      <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Create metric</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,33 @@
+.header {
+  background: var(--decisio-surface);
+  border-bottom: 1px solid var(--decisio-border);
+  padding: 1.25rem 2rem;
+  flex-shrink: 0;
+  box-shadow: var(--decisio-shadow);
+}
+
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header-content {
+  position: relative;
+  padding-left: 0.5rem;
+  border-left: 3px solid var(--decisio-accent);
+}
+
+.app-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--decisio-text);
+  letter-spacing: -0.03em;
+}
+
+.app-tagline {
+  margin: 0.35rem 0 0;
+  font-size: 0.875rem;
+  color: var(--decisio-text-muted);
+  font-weight: 400;
+}

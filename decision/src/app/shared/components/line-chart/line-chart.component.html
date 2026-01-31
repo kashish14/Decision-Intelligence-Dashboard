@@ -1,0 +1,10 @@
+<div class="line-chart" [style.height.px]="height">
+  <svg viewBox="0 0 100 100" preserveAspectRatio="none" class="chart-svg">
+    <path class="line intended" [attr.d]="pathPoints" fill="none" stroke="currentColor" stroke-width="0.5" vector-effect="non-scaling-stroke" />
+    <path class="line actual" [attr.d]="actualPathPoints" fill="none" stroke="currentColor" stroke-width="0.5" vector-effect="non-scaling-stroke" />
+  </svg>
+  <div class="legend">
+    <span class="legend-item intended">Intended</span>
+    <span class="legend-item actual">Actual</span>
+  </div>
+</div>

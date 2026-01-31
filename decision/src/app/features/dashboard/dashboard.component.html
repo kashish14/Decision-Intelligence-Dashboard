@@ -1,0 +1,52 @@
+<div class="dashboard">
+  <section class="hero">
+    <h2 class="hero-title">Decision Intelligence</h2>
+    <p class="hero-subtitle">Connect decisions to outcomes. Make learning explicit.</p>
+  </section>
+
+  <section class="summary-cards">
+    <div class="card card-accent" *ngIf="decisionsWithOutcomes$ | async as list">
+      <span class="card-icon">▣</span>
+      <h3 class="card-title">Decisions tracked</h3>
+      <p class="card-value">{{ list.length }}</p>
+    </div>
+    <div class="card card-metrics" *ngIf="decisionsWithOutcomes$ | async as list">
+      <span class="card-icon">↗</span>
+      <h3 class="card-title">Metrics linked</h3>
+      <p class="card-value">{{ totalMetrics(list) }}</p>
+    </div>
+    <div class="card card-insights" *ngIf="insights$ | async as insights">
+      <span class="card-icon">◆</span>
+      <h3 class="card-title">Insights</h3>
+      <p class="card-value">{{ insights.length }}</p>
+    </div>
+  </section>
+
+  <section class="recent-section">
+    <h3 class="section-title">Recent decisions &amp; outcomes</h3>
+    <div class="outcome-list" *ngIf="decisionsWithOutcomes$ | async as list">
+      <article class="outcome-card" *ngFor="let wo of list" [attr.data-type]="wo.decision.type">
+        <div class="outcome-header">
+          <span class="outcome-type-badge">{{ wo.decision.type }}</span>
+          <span class="outcome-confidence">{{ wo.decision.confidenceLevel }}</span>
+        </div>
+        <h4 class="outcome-title">{{ wo.decision.title }}</h4>
+        <div class="outcome-score" *ngIf="wo.outcomeScore != null">
+          <span class="score-label">Outcome score</span>
+          <app-bar-chart [value]="wo.outcomeScore" [max]="100" [label]="wo.outcomeScore + '%'" [color]="wo.outcomeScore >= 70 ? 'success' : wo.outcomeScore >= 50 ? 'warning' : 'danger'"></app-bar-chart>
+        </div>
+        <p class="outcome-score muted" *ngIf="wo.outcomeScore == null && wo.metrics.length === 0">No metrics linked yet.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="insights-section">
+    <h3 class="section-title">Insights</h3>
+    <div class="insight-list" *ngIf="insights$ | async as insights">
+      <article class="insight-card" *ngFor="let i of insights" [attr.data-type]="i.type">
+        <h4 class="insight-title">{{ i.title }}</h4>
+        <p class="insight-desc">{{ i.description }}</p>
+      </article>
+    </div>
+  </section>
+</div>

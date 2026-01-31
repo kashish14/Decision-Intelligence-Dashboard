@@ -1,0 +1,20 @@
+<div class="decision-list">
+  <header class="page-header">
+    <div class="page-header-text">
+      <h2 class="page-title">Decision Log</h2>
+      <p class="page-subtitle">Capture problem, options, chosen path, assumptions, and risks.</p>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="create()">+ Create decision</button>
+  </header>
+
+  <ul class="list" *ngIf="decisions$ | async as decisions">
+    <li *ngFor="let d of decisions" class="list-item">
+      <article class="card" (click)="open(d.id)" [attr.data-type]="d.type">
+        <span class="card-badge">{{ d.type }}</span>
+        <h3 class="card-title">{{ d.title }}</h3>
+        <p class="card-meta">{{ d.confidenceLevel }} confidence</p>
+        <p class="card-snippet">{{ d.problemStatement | slice:0:140 }}{{ d.problemStatement.length > 140 ? '…' : '' }}</p>
+      </article>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,37 @@
+.decision-create { max-width: 640px; }
+
+.page-header { margin-bottom: 1.5rem; }
+.page-title { margin: 0 0 0.25rem; font-size: 1.5rem; font-weight: 600; color: var(--decisio-text); }
+.page-subtitle { margin: 0; font-size: 0.9375rem; color: var(--decisio-text-muted); }
+
+.form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--decisio-text);
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9375rem;
+  border: 1px solid var(--decisio-border);
+  border-radius: var(--decisio-radius);
+  font-family: inherit;
+}
+
+.textarea { resize: vertical; min-height: 80px; }
+
+.array-row { display: flex; gap: 0.5rem; margin-bottom: 0.5rem; }
+.array-row .input { flex: 1; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+.btn { padding: 0.5rem 1rem; font-size: 0.9375rem; font-weight: 500; border-radius: var(--decisio-radius); border: none; cursor: pointer; font-family: inherit; }
+.btn-primary { background: var(--decisio-accent); color: #fff; }
+.btn-ghost { background: transparent; color: var(--decisio-text-muted); }
+.btn-ghost.add { margin-top: 0.25rem; }
+.form-actions { display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 0.5rem; }

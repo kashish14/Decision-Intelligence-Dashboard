@@ -1,0 +1,20 @@
+<div class="metrics-list">
+  <header class="page-header">
+    <div class="page-header-text">
+      <h2 class="page-title">Outcome Metrics</h2>
+      <p class="page-subtitle">Define success metrics per decision. Track intended vs actual outcomes.</p>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="create()">+ Add metric</button>
+  </header>
+
+  <div class="list" *ngIf="metricsWithDecision$ | async as list">
+    <article class="card" *ngFor="let item of list" (click)="open(item.metric.id)">
+      <span class="card-badge">Metric</span>
+      <h3 class="card-title">{{ item.metric.name }}</h3>
+      <p class="card-meta" *ngIf="item.decision">Decision: {{ item.decision.title }}</p>
+      <p class="card-desc" *ngIf="item.metric.description">{{ item.metric.description }}</p>
+      <app-line-chart [intended]="item.metric.intendedEvolution" [actual]="item.metric.actualEvolution" [height]="80"></app-line-chart>
+    </article>
+    <p class="muted" *ngIf="list.length === 0">No metrics defined yet.</p>
+  </div>
+</div>

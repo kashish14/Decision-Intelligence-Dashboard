@@ -1,0 +1,44 @@
+<div class="tradeoff-create">
+  <header class="page-header">
+    <h2 class="page-title">Log trade-off</h2>
+    <p class="page-subtitle">Capture dimensions and rationale.</p>
+  </header>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" class="form">
+    <div class="form-group">
+      <label for="decision">Link to decision (optional)</label>
+      <select id="decision" formControlName="decisionId" class="input">
+        <option value="">— None —</option>
+        <option *ngFor="let d of decisions$ | async" [value]="d.id">{{ d.title }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input id="title" type="text" formControlName="title" class="input" placeholder="e.g. Speed vs quality" />
+    </div>
+
+    <div class="form-group">
+      <label for="rationale">Rationale</label>
+      <textarea id="rationale" formControlName="rationale" class="input textarea" rows="3" placeholder="Why this compromise?"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Dimensions</label>
+      <div formArrayName="dimensions">
+        <div *ngFor="let c of dimensions.controls; let i = index" [formGroupName]="i" class="dim-row">
+          <input formControlName="name" class="input" placeholder="Dimension name" />
+          <input formControlName="value" type="number" min="0" max="100" class="input num" placeholder="0-100" />
+          <input formControlName="label" class="input" placeholder="Label (optional)" />
+          <button type="button" class="btn btn-ghost" (click)="removeDimension(i)" *ngIf="dimensions.length > 2">Remove</button>
+        </div>
+        <button type="button" class="btn btn-ghost add" (click)="addDimension()">+ Add dimension</button>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" class="btn btn-ghost" (click)="cancel()">Cancel</button>
+      <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Save trade-off</button>
+    </div>
+  </form>
+</div>

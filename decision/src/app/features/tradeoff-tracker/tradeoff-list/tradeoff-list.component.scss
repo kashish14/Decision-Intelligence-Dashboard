@@ -1,0 +1,86 @@
+.tradeoff-list { max-width: 820px; }
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.page-header-text { flex: 1; min-width: 200px; }
+
+.page-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--decisio-text);
+  letter-spacing: -0.02em;
+}
+
+.page-subtitle {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--decisio-text-muted);
+  line-height: 1.5;
+}
+
+.btn {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: var(--decisio-radius-sm);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary {
+  background: var(--decisio-accent);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--decisio-accent-hover);
+  transform: translateY(-1px);
+}
+
+.list { display: flex; flex-direction: column; gap: 1rem; }
+
+.card {
+  background: var(--decisio-surface);
+  border: 1px solid var(--decisio-border);
+  border-radius: var(--decisio-radius);
+  padding: 1.5rem;
+  box-shadow: var(--decisio-shadow);
+  border-left: 4px solid var(--decisio-accent);
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.card:hover {
+  box-shadow: var(--decisio-shadow-md);
+  transform: translateY(-2px);
+}
+
+.card-badge {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  background: var(--decisio-accent-soft);
+  color: var(--decisio-accent);
+}
+
+.card-title { margin: 0 0 0.35rem; font-size: 1.0625rem; font-weight: 600; color: var(--decisio-text); line-height: 1.35; }
+.card-meta { margin: 0 0 0.5rem; font-size: 0.8125rem; color: var(--decisio-text-muted); }
+.card-rationale { margin: 0 0 1rem; font-size: 0.875rem; color: var(--decisio-text-muted); line-height: 1.55; }
+.dimensions { display: flex; flex-direction: column; gap: 0.75rem; }
+.dim .dim-name { font-size: 0.8125rem; color: var(--decisio-text-muted); margin-bottom: 0.25rem; display: block; }
+.muted { margin: 0; font-size: 0.875rem; color: var(--decisio-text-muted); }

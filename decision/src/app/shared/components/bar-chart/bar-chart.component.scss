@@ -1,0 +1,31 @@
+.bar-chart {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.bar-track {
+  flex: 1;
+  height: 8px;
+  background: var(--decisio-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.bar-chart[data-color="accent"] .bar-fill { background: var(--decisio-accent); }
+.bar-chart[data-color="success"] .bar-fill { background: var(--decisio-success); }
+.bar-chart[data-color="warning"] .bar-fill { background: var(--decisio-warning); }
+.bar-chart[data-color="danger"] .bar-fill { background: var(--decisio-danger); }
+
+.bar-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--decisio-text);
+  min-width: 2.5rem;
+}

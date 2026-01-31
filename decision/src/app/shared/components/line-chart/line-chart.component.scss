@@ -1,0 +1,31 @@
+.line-chart {
+  position: relative;
+  width: 100%;
+  min-height: 80px;
+}
+
+.chart-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.line.intended {
+  color: var(--decisio-accent);
+  stroke-dasharray: 2 1;
+}
+
+.line.actual {
+  color: var(--decisio-success);
+}
+
+.legend {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--decisio-text-muted);
+}
+
+.legend-item.intended::before { content: ''; display: inline-block; width: 12px; height: 2px; background: var(--decisio-accent); margin-right: 0.35rem; vertical-align: middle; }
+.legend-item.actual::before { content: ''; display: inline-block; width: 12px; height: 2px; background: var(--decisio-success); margin-right: 0.35rem; vertical-align: middle; }

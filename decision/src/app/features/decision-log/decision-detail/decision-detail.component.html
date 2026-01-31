@@ -1,0 +1,70 @@
+<div class="decision-detail" *ngIf="decision$ | async as decision; else loading">
+  <header class="page-header">
+    <button type="button" class="btn btn-ghost back" (click)="back()">← Back</button>
+    <h2 class="page-title">{{ decision.title }}</h2>
+    <p class="page-meta">{{ decision.type }} · {{ decision.confidenceLevel }} confidence</p>
+  </header>
+
+  <section class="section">
+    <h3 class="section-title">Problem</h3>
+    <p class="section-body">{{ decision.problemStatement }}</p>
+  </section>
+
+  <section class="section">
+    <h3 class="section-title">Options considered</h3>
+    <ul class="list">
+      <li *ngFor="let o of decision.optionsConsidered" [class.chosen]="o === decision.chosenOption">{{ o }}</li>
+    </ul>
+    <p class="chosen">Chosen: <strong>{{ decision.chosenOption }}</strong></p>
+  </section>
+
+  <section class="section">
+    <h3 class="section-title">Assumptions</h3>
+    <ul class="list" *ngIf="decision.assumptions.length; else noAssumptions">
+      <li *ngFor="let a of decision.assumptions">{{ a }}</li>
+    </ul>
+    <ng-template #noAssumptions><p class="muted">None recorded.</p></ng-template>
+  </section>
+
+  <section class="section">
+    <h3 class="section-title">Risks</h3>
+    <ul class="list" *ngIf="decision.risks.length; else noRisks">
+      <li *ngFor="let r of decision.risks">{{ r }}</li>
+    </ul>
+    <ng-template #noRisks><p class="muted">None recorded.</p></ng-template>
+  </section>
+
+  <section class="section">
+    <h3 class="section-title">Trade-offs</h3>
+    <div class="tradeoffs" *ngIf="tradeoffs$ | async as list">
+      <article class="card" *ngFor="let t of list">
+        <h4 class="card-title">{{ t.title }}</h4>
+        <p class="card-rationale">{{ t.rationale }}</p>
+        <div class="dimensions">
+          <div *ngFor="let dim of t.dimensions" class="dim">
+            <span class="dim-name">{{ dim.name }}</span>
+            <app-bar-chart [value]="dim.value" [max]="100" [label]="dim.label || dim.value + '%'"></app-bar-chart>
+          </div>
+        </div>
+      </article>
+      <p class="muted" *ngIf="list.length === 0">No trade-offs linked yet.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3 class="section-title">Outcome metrics</h3>
+    <div class="metrics" *ngIf="metrics$ | async as list">
+      <article class="card" *ngFor="let m of list">
+        <h4 class="card-title">{{ m.name }}</h4>
+        <p class="card-desc" *ngIf="m.description">{{ m.description }}</p>
+        <app-line-chart [intended]="m.intendedEvolution" [actual]="m.actualEvolution" [unit]="m.unit || ''"></app-line-chart>
+      </article>
+      <button type="button" class="btn btn-ghost" (click)="createMetric(decision.id)">+ Add metric</button>
+      <p class="muted" *ngIf="list.length === 0">No metrics linked yet. <a routerLink="/metrics" [queryParams]="{ decisionId: decision.id }">Add metric</a></p>
+    </div>
+  </section>
+</div>
+
+<ng-template #loading>
+  <p class="loading">Loading…</p>
+</ng-template>

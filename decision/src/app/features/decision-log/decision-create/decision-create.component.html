@@ -1,0 +1,76 @@
+<div class="decision-create">
+  <header class="page-header">
+    <h2 class="page-title">Create decision</h2>
+    <p class="page-subtitle">Capture context, options, and trade-offs.</p>
+  </header>
+
+  <form [formGroup]="form" (ngSubmit)="submit()" class="form">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input id="title" type="text" formControlName="title" class="input" placeholder="Short title for this decision" />
+    </div>
+
+    <div class="form-group">
+      <label for="problem">Problem statement</label>
+      <textarea id="problem" formControlName="problemStatement" class="input textarea" rows="3" placeholder="What problem were you solving?"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Options considered</label>
+      <div formArrayName="optionsConsidered">
+        <div *ngFor="let c of optionsConsidered.controls; let i = index" class="array-row">
+          <input [formControlName]="i" class="input" placeholder="Option {{ i + 1 }}" />
+          <button type="button" class="btn btn-ghost" (click)="removeOption(i)" *ngIf="optionsConsidered.length > 1">Remove</button>
+        </div>
+        <button type="button" class="btn btn-ghost add" (click)="addOption()">+ Add option</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="chosen">Chosen option</label>
+      <input id="chosen" type="text" formControlName="chosenOption" class="input" placeholder="What did you decide?" />
+    </div>
+
+    <div class="form-group">
+      <label>Assumptions</label>
+      <div formArrayName="assumptions">
+        <div *ngFor="let c of assumptions.controls; let i = index" class="array-row">
+          <input [formControlName]="i" class="input" placeholder="Assumption" />
+          <button type="button" class="btn btn-ghost" (click)="removeAssumption(i)" *ngIf="assumptions.length > 1">Remove</button>
+        </div>
+        <button type="button" class="btn btn-ghost add" (click)="addAssumption()">+ Add assumption</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Risks</label>
+      <div formArrayName="risks">
+        <div *ngFor="let c of risks.controls; let i = index" class="array-row">
+          <input [formControlName]="i" class="input" placeholder="Risk" />
+          <button type="button" class="btn btn-ghost" (click)="removeRisk(i)" *ngIf="risks.length > 1">Remove</button>
+        </div>
+        <button type="button" class="btn btn-ghost add" (click)="addRisk()">+ Add risk</button>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="confidence">Confidence level</label>
+        <select id="confidence" formControlName="confidenceLevel" class="input">
+          <option *ngFor="let l of confidenceLevels" [value]="l">{{ l }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="type">Type</label>
+        <select id="type" formControlName="type" class="input">
+          <option *ngFor="let t of decisionTypes" [value]="t">{{ t }}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" class="btn btn-ghost" (click)="cancel()">Cancel</button>
+      <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Save decision</button>
+    </div>
+  </form>
+</div>

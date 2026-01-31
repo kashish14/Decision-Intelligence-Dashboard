@@ -1,0 +1,25 @@
+<div class="tradeoff-list">
+  <header class="page-header">
+    <div class="page-header-text">
+      <h2 class="page-title">Trade-off Tracker</h2>
+      <p class="page-subtitle">Log trade-offs and visualize dimensions. Show rationale behind compromises.</p>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="create()">+ Log trade-off</button>
+  </header>
+
+  <div class="list" *ngIf="tradeoffsWithDecision$ | async as list">
+    <article class="card" *ngFor="let item of list">
+      <span class="card-badge">Trade-off</span>
+      <h3 class="card-title">{{ item.tradeoff.title }}</h3>
+      <p class="card-meta" *ngIf="item.decision">Decision: {{ item.decision.title }}</p>
+      <p class="card-rationale">{{ item.tradeoff.rationale }}</p>
+      <div class="dimensions">
+        <div class="dim" *ngFor="let dim of item.tradeoff.dimensions">
+          <span class="dim-name">{{ dim.name }}</span>
+          <app-bar-chart [value]="dim.value" [max]="100" [label]="dim.label || (dim.value + '%')"></app-bar-chart>
+        </div>
+      </div>
+    </article>
+    <p class="muted" *ngIf="list.length === 0">No trade-offs logged yet.</p>
+  </div>
+</div>

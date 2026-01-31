@@ -1,0 +1,38 @@
+<div class="metric-detail" *ngIf="metric$ | async as metric; else loading">
+  <header class="page-header">
+    <button type="button" class="btn btn-ghost back" (click)="back()">← Back</button>
+    <h2 class="page-title">{{ metric.name }}</h2>
+    <p class="page-meta" *ngIf="decision$ | async as decision">Decision: {{ decision.title }}</p>
+  </header>
+
+  <section class="section">
+    <p class="desc" *ngIf="metric.description">{{ metric.description }}</p>
+    <p class="target" *ngIf="metric.targetValue != null">Target: {{ metric.targetValue }}{{ metric.unit || '' }}</p>
+  </section>
+
+  <section class="section">
+    <h3 class="section-title">Intended vs actual</h3>
+    <app-line-chart [intended]="metric.intendedEvolution" [actual]="metric.actualEvolution" [height]="160" [unit]="metric.unit || ''"></app-line-chart>
+  </section>
+
+  <section class="section">
+    <h3 class="section-title">Data points</h3>
+    <div class="points">
+      <div class="points-col">
+        <h4>Intended</h4>
+        <ul>
+          <li *ngFor="let p of metric.intendedEvolution">{{ p.date }}: {{ p.value }}{{ metric.unit || '' }}</li>
+        </ul>
+      </div>
+      <div class="points-col">
+        <h4>Actual</h4>
+        <ul>
+          <li *ngFor="let p of metric.actualEvolution">{{ p.date }}: {{ p.value }}{{ metric.unit || '' }}</li>
+        </ul>
+        <p class="muted" *ngIf="metric.actualEvolution.length === 0">No actual data yet.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<ng-template #loading><p class="loading">Loading…</p></ng-template>

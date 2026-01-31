@@ -1,0 +1,103 @@
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--decisio-sidebar-bg);
+  color: var(--decisio-sidebar-text);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.06);
+}
+
+.sidebar-brand {
+  padding: 1.5rem 1.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--decisio-sidebar-brand) 0%, #6366f1 100%);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--decisio-radius-sm);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.35);
+}
+
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.nav-section {
+  flex: 1;
+  padding: 1rem 0;
+  overflow-y: auto;
+}
+
+.nav-section-label {
+  display: block;
+  padding: 0 1.25rem 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(148, 163, 184, 0.7);
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0.75rem;
+}
+
+.nav-item {
+  margin: 0 0 2px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-radius: var(--decisio-radius-sm);
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: var(--decisio-sidebar-hover);
+    color: var(--decisio-sidebar-active);
+  }
+
+  &.active {
+    background: var(--decisio-sidebar-hover);
+    color: var(--decisio-sidebar-active);
+    box-shadow: inset 0 0 0 1px rgba(129, 140, 248, 0.25);
+  }
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+.nav-label {
+  flex: 1;
+}

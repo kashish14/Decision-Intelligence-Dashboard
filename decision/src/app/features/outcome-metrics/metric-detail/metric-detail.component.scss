@@ -1,0 +1,14 @@
+.metric-detail { max-width: 720px; }
+.page-header { margin-bottom: 1.5rem; }
+.back { margin-bottom: 0.5rem; font-size: 0.875rem; }
+.page-title { margin: 0 0 0.25rem; font-size: 1.5rem; font-weight: 600; color: var(--decisio-text); }
+.page-meta { margin: 0; font-size: 0.875rem; color: var(--decisio-text-muted); }
+.btn { padding: 0.5rem 1rem; font-size: 0.9375rem; border-radius: var(--decisio-radius); border: none; cursor: pointer; font-family: inherit; background: transparent; color: var(--decisio-text-muted); }
+.section { margin-bottom: 1.5rem; }
+.section-title { margin: 0 0 0.75rem; font-size: 1rem; font-weight: 600; color: var(--decisio-text); }
+.desc, .target { margin: 0 0 0.5rem; font-size: 0.9375rem; color: var(--decisio-text-muted); }
+.points { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.points-col h4 { margin: 0 0 0.5rem; font-size: 0.875rem; font-weight: 600; color: var(--decisio-text); }
+.points-col ul { margin: 0; padding-left: 1.25rem; font-size: 0.875rem; color: var(--decisio-text-muted); }
+.muted { margin: 0; font-size: 0.875rem; color: var(--decisio-text-muted); }
+.loading { margin: 2rem 0; color: var(--decisio-text-muted); }

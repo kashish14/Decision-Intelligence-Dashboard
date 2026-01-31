@@ -1,0 +1,28 @@
+.decision-detail { max-width: 720px; }
+
+.page-header { margin-bottom: 1.5rem; }
+.back { margin-bottom: 0.5rem; font-size: 0.875rem; }
+.page-title { margin: 0 0 0.25rem; font-size: 1.5rem; font-weight: 600; color: var(--decisio-text); }
+.page-meta { margin: 0; font-size: 0.875rem; color: var(--decisio-text-muted); }
+
+.btn { padding: 0.5rem 1rem; font-size: 0.9375rem; border-radius: var(--decisio-radius); border: none; cursor: pointer; font-family: inherit; background: transparent; color: var(--decisio-text-muted); }
+
+.section { margin-bottom: 1.5rem; }
+.section-title { margin: 0 0 0.5rem; font-size: 1rem; font-weight: 600; color: var(--decisio-text); }
+.section-body { margin: 0; font-size: 0.9375rem; line-height: 1.6; color: var(--decisio-text); }
+
+.list { margin: 0.5rem 0 0; padding-left: 1.25rem; }
+.list li { margin-bottom: 0.25rem; }
+.list li.chosen { font-weight: 600; color: var(--decisio-accent); }
+.chosen { margin: 0.5rem 0 0; font-size: 0.9375rem; }
+.muted { margin: 0; font-size: 0.875rem; color: var(--decisio-text-muted); }
+.loading { margin: 2rem 0; color: var(--decisio-text-muted); }
+
+.card { background: var(--decisio-surface); border: 1px solid var(--decisio-border); border-radius: var(--decisio-radius); padding: 1rem; margin-bottom: 1rem; }
+.card-title { margin: 0 0 0.5rem; font-size: 1rem; font-weight: 600; }
+.card-rationale, .card-desc { margin: 0 0 0.75rem; font-size: 0.875rem; color: var(--decisio-text-muted); }
+.dimensions { display: flex; flex-direction: column; gap: 0.5rem; }
+.dim .dim-name { font-size: 0.8125rem; color: var(--decisio-text-muted); margin-bottom: 0.25rem; display: block; }
+
+.metrics .btn { margin-top: 0.5rem; }
+a { color: var(--decisio-accent); }

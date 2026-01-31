@@ -1,0 +1,15 @@
+<div class="insights-page">
+  <header class="page-header">
+    <h2 class="page-title">Insights</h2>
+    <p class="page-subtitle">High-impact decisions, outcome gaps, trade-off patterns, and reflection prompts.</p>
+  </header>
+
+  <div class="insight-list" *ngIf="insights$ | async as list">
+    <article class="insight-card" *ngFor="let i of list" [attr.data-type]="i.type">
+      <h3 class="insight-title">{{ i.title }}</h3>
+      <p class="insight-desc">{{ i.description }}</p>
+      <button *ngIf="i.actionable && i.decisionId" type="button" class="btn btn-ghost" (click)="goToDecision(i.decisionId!)">View decision</button>
+    </article>
+    <p class="muted" *ngIf="list.length === 0">No insights yet. Add decisions and metrics to surface patterns.</p>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<div class="bar-chart" [attr.data-color]="color">
+  <div class="bar-track">
+    <div class="bar-fill" [style.width.%]="widthPct"></div>
+  </div>
+  <span class="bar-label" *ngIf="label">{{ label }}</span>
+</div>

@@ -1,0 +1,26 @@
+<nav class="sidebar">
+  <div class="sidebar-brand">
+    <span class="brand-icon">◇</span>
+    <span class="brand-name">Decision</span>
+  </div>
+  <div class="nav-section">
+    <span class="nav-section-label">Menu</span>
+    <ul class="nav-list">
+      <li *ngFor="let item of navItems" class="nav-item">
+        <a [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: item.route === '/dashboard' }" class="nav-link">
+          <span class="nav-icon" [attr.data-icon]="item.icon">
+            <ng-container [ngSwitch]="item.icon">
+              <span *ngSwitchCase="'dashboard'">◉</span>
+              <span *ngSwitchCase="'list'">▣</span>
+              <span *ngSwitchCase="'balance'">◐</span>
+              <span *ngSwitchCase="'trending'">↗</span>
+              <span *ngSwitchCase="'lightbulb'">◆</span>
+              <span *ngSwitchDefault>•</span>
+            </ng-container>
+          </span>
+          <span class="nav-label">{{ item.label }}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
