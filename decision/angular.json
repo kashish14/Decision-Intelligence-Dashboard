@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "decisio": {
+    "Decision": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/decisio",
+            "outputPath": "dist/Decision",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "decisio:build:production"
+              "buildTarget": "Decision:build:production"
             },
             "development": {
-              "buildTarget": "decisio:build:development"
+              "buildTarget": "Decision:build:development"
             }
           },
           "defaultConfiguration": "development"

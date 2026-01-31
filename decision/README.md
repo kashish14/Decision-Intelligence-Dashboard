@@ -105,7 +105,7 @@ Then open **http://localhost:4200**.
 npm run build
 ```
 
-Output is in `dist/decisio/`.
+Output is in `dist/Decision/`.
 
 **Run tests:**
 

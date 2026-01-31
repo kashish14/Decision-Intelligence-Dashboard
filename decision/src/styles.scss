@@ -1,33 +1,33 @@
 /* Decision — Global styles */
 
 :root {
-  --decisio-bg: #f0f2f5;
-  --decisio-surface: #ffffff;
-  --decisio-surface-elevated: #ffffff;
-  --decisio-border: #e2e6ea;
-  --decisio-text: #1a1d21;
-  --decisio-text-muted: #5c6370;
-  --decisio-accent: #4f46e5;
-  --decisio-accent-hover: #4338ca;
-  --decisio-accent-soft: #eef2ff;
-  --decisio-success: #059669;
-  --decisio-success-soft: #d1fae5;
-  --decisio-warning: #d97706;
-  --decisio-warning-soft: #fef3c7;
-  --decisio-danger: #dc2626;
-  --decisio-danger-soft: #fee2e2;
-  --decisio-info: #0284c7;
-  --decisio-sidebar-bg: #0f172a;
-  --decisio-sidebar-brand: #818cf8;
-  --decisio-sidebar-text: #94a3b8;
-  --decisio-sidebar-active: #ffffff;
-  --decisio-sidebar-hover: rgba(129, 140, 248, 0.12);
-  --decisio-radius: 10px;
-  --decisio-radius-sm: 6px;
-  --decisio-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-  --decisio-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --decisio-shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.1);
-  --decisio-font: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --Decision-bg: #f0f2f5;
+  --Decision-surface: #ffffff;
+  --Decision-surface-elevated: #ffffff;
+  --Decision-border: #e2e6ea;
+  --Decision-text: #1a1d21;
+  --Decision-text-muted: #5c6370;
+  --Decision-accent: #4f46e5;
+  --Decision-accent-hover: #4338ca;
+  --Decision-accent-soft: #eef2ff;
+  --Decision-success: #059669;
+  --Decision-success-soft: #d1fae5;
+  --Decision-warning: #d97706;
+  --Decision-warning-soft: #fef3c7;
+  --Decision-danger: #dc2626;
+  --Decision-danger-soft: #fee2e2;
+  --Decision-info: #0284c7;
+  --Decision-sidebar-bg: #0f172a;
+  --Decision-sidebar-brand: #818cf8;
+  --Decision-sidebar-text: #94a3b8;
+  --Decision-sidebar-active: #ffffff;
+  --Decision-sidebar-hover: rgba(129, 140, 248, 0.12);
+  --Decision-radius: 10px;
+  --Decision-radius-sm: 6px;
+  --Decision-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --Decision-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --Decision-shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.1);
+  --Decision-font: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 *,
@@ -40,10 +40,10 @@ html,
 body {
   height: 100%;
   margin: 0;
-  font-family: var(--decisio-font);
+  font-family: var(--Decision-font);
   font-size: 15px;
-  color: var(--decisio-text);
-  background: var(--decisio-bg);
+  color: var(--Decision-text);
+  background: var(--Decision-bg);
   -webkit-font-smoothing: antialiased;
 }
 

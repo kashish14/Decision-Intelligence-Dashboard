@@ -1,9 +1,9 @@
 .header {
-  background: var(--decisio-surface);
-  border-bottom: 1px solid var(--decisio-border);
+  background: var(--Decision-surface);
+  border-bottom: 1px solid var(--Decision-border);
   padding: 1.25rem 2rem;
   flex-shrink: 0;
-  box-shadow: var(--decisio-shadow);
+  box-shadow: var(--Decision-shadow);
 }
 
 .header-inner {
@@ -14,20 +14,20 @@
 .header-content {
   position: relative;
   padding-left: 0.5rem;
-  border-left: 3px solid var(--decisio-accent);
+  border-left: 3px solid var(--Decision-accent);
 }
 
 .app-title {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--decisio-text);
+  color: var(--Decision-text);
   letter-spacing: -0.03em;
 }
 
 .app-tagline {
   margin: 0.35rem 0 0;
   font-size: 0.875rem;
-  color: var(--decisio-text-muted);
+  color: var(--Decision-text-muted);
   font-weight: 400;
 }

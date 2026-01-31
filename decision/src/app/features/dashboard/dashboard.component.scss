@@ -6,23 +6,23 @@
 .hero {
   margin-bottom: 2.5rem;
   padding: 2rem 2.5rem;
-  border-radius: var(--decisio-radius);
-  background: linear-gradient(135deg, var(--decisio-accent-soft) 0%, rgba(255, 255, 255, 0.9) 100%);
-  border: 1px solid var(--decisio-border);
+  border-radius: var(--Decision-radius);
+  background: linear-gradient(135deg, var(--Decision-accent-soft) 0%, rgba(255, 255, 255, 0.9) 100%);
+  border: 1px solid var(--Decision-border);
 }
 
 .hero-title {
   margin: 0 0 0.5rem;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--decisio-text);
+  color: var(--Decision-text);
   letter-spacing: -0.03em;
 }
 
 .hero-subtitle {
   margin: 0;
   font-size: 1.0625rem;
-  color: var(--decisio-text-muted);
+  color: var(--Decision-text-muted);
   line-height: 1.5;
 }
 
@@ -34,17 +34,17 @@
 }
 
 .card {
-  background: var(--decisio-surface);
-  border: 1px solid var(--decisio-border);
-  border-radius: var(--decisio-radius);
+  background: var(--Decision-surface);
+  border: 1px solid var(--Decision-border);
+  border-radius: var(--Decision-radius);
   padding: 1.5rem;
-  box-shadow: var(--decisio-shadow);
+  box-shadow: var(--Decision-shadow);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
   position: relative;
   overflow: hidden;
 
   &:hover {
-    box-shadow: var(--decisio-shadow-md);
+    box-shadow: var(--Decision-shadow-md);
   }
 }
 
@@ -54,22 +54,22 @@
   height: 40px;
   align-items: center;
   justify-content: center;
-  background: var(--decisio-accent-soft);
-  color: var(--decisio-accent);
+  background: var(--Decision-accent-soft);
+  color: var(--Decision-accent);
   font-size: 1.25rem;
-  border-radius: var(--decisio-radius-sm);
+  border-radius: var(--Decision-radius-sm);
   margin-bottom: 1rem;
 }
 
-.card-accent .card-icon { background: var(--decisio-accent-soft); color: var(--decisio-accent); }
-.card-metrics .card-icon { background: #dbeafe; color: var(--decisio-info); }
-.card-insights .card-icon { background: var(--decisio-warning-soft); color: var(--decisio-warning); }
+.card-accent .card-icon { background: var(--Decision-accent-soft); color: var(--Decision-accent); }
+.card-metrics .card-icon { background: #dbeafe; color: var(--Decision-info); }
+.card-insights .card-icon { background: var(--Decision-warning-soft); color: var(--Decision-warning); }
 
 .card-title {
   margin: 0 0 0.35rem;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--decisio-text-muted);
+  color: var(--Decision-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -78,7 +78,7 @@
   margin: 0;
   font-size: 2rem;
   font-weight: 700;
-  color: var(--decisio-text);
+  color: var(--Decision-text);
   letter-spacing: -0.02em;
 }
 
@@ -86,7 +86,7 @@
   margin: 0 0 1.25rem;
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--decisio-text);
+  color: var(--Decision-text);
   letter-spacing: -0.02em;
 }
 
@@ -103,21 +103,21 @@
 }
 
 .outcome-card {
-  background: var(--decisio-surface);
-  border: 1px solid var(--decisio-border);
-  border-radius: var(--decisio-radius);
+  background: var(--Decision-surface);
+  border: 1px solid var(--Decision-border);
+  border-radius: var(--Decision-radius);
   padding: 1.5rem;
-  box-shadow: var(--decisio-shadow);
+  box-shadow: var(--Decision-shadow);
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 
   &:hover {
-    box-shadow: var(--decisio-shadow-md);
+    box-shadow: var(--Decision-shadow-md);
     border-color: rgba(79, 70, 229, 0.2);
   }
 
-  &[data-type="product"] { border-left: 4px solid var(--decisio-accent); }
-  &[data-type="tech"] { border-left: 4px solid var(--decisio-info); }
-  &[data-type="process"] { border-left: 4px solid var(--decisio-success); }
+  &[data-type="product"] { border-left: 4px solid var(--Decision-accent); }
+  &[data-type="tech"] { border-left: 4px solid var(--Decision-info); }
+  &[data-type="process"] { border-left: 4px solid var(--Decision-success); }
 }
 
 .outcome-header {
@@ -133,16 +133,16 @@
   letter-spacing: 0.05em;
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
-  background: var(--decisio-accent-soft);
-  color: var(--decisio-accent);
+  background: var(--Decision-accent-soft);
+  color: var(--Decision-accent);
 }
 
-.outcome-card[data-type="tech"] .outcome-type-badge { background: #dbeafe; color: var(--decisio-info); }
-.outcome-card[data-type="process"] .outcome-type-badge { background: var(--decisio-success-soft); color: var(--decisio-success); }
+.outcome-card[data-type="tech"] .outcome-type-badge { background: #dbeafe; color: var(--Decision-info); }
+.outcome-card[data-type="process"] .outcome-type-badge { background: var(--Decision-success-soft); color: var(--Decision-success); }
 
 .outcome-confidence {
   font-size: 0.6875rem;
-  color: var(--decisio-text-muted);
+  color: var(--Decision-text-muted);
   padding: 0.2rem 0;
 }
 
@@ -150,14 +150,14 @@
   margin: 0 0 0.75rem;
   font-size: 1.0625rem;
   font-weight: 600;
-  color: var(--decisio-text);
+  color: var(--Decision-text);
   line-height: 1.4;
 }
 
 .outcome-score {
   margin: 0;
   font-size: 0.875rem;
-  color: var(--decisio-text-muted);
+  color: var(--Decision-text-muted);
 }
 
 .outcome-score.muted {
@@ -169,49 +169,49 @@
   margin-bottom: 0.35rem;
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--decisio-text-muted);
+  color: var(--Decision-text-muted);
 }
 
 .insight-card {
-  background: var(--decisio-surface);
-  border: 1px solid var(--decisio-border);
-  border-radius: var(--decisio-radius);
+  background: var(--Decision-surface);
+  border: 1px solid var(--Decision-border);
+  border-radius: var(--Decision-radius);
   padding: 1.5rem;
-  box-shadow: var(--decisio-shadow);
+  box-shadow: var(--Decision-shadow);
   transition: box-shadow 0.2s ease;
 
   &:hover {
-    box-shadow: var(--decisio-shadow-md);
+    box-shadow: var(--Decision-shadow-md);
   }
 }
 
 .insight-card[data-type="high_impact"] {
-  border-left: 4px solid var(--decisio-success);
-  background: linear-gradient(90deg, var(--decisio-success-soft) 0%, var(--decisio-surface) 12%);
+  border-left: 4px solid var(--Decision-success);
+  background: linear-gradient(90deg, var(--Decision-success-soft) 0%, var(--Decision-surface) 12%);
 }
 .insight-card[data-type="poor_outcome"] {
-  border-left: 4px solid var(--decisio-danger);
-  background: linear-gradient(90deg, var(--decisio-danger-soft) 0%, var(--decisio-surface) 12%);
+  border-left: 4px solid var(--Decision-danger);
+  background: linear-gradient(90deg, var(--Decision-danger-soft) 0%, var(--Decision-surface) 12%);
 }
 .insight-card[data-type="tradeoff_pattern"] {
-  border-left: 4px solid var(--decisio-accent);
-  background: linear-gradient(90deg, var(--decisio-accent-soft) 0%, var(--decisio-surface) 12%);
+  border-left: 4px solid var(--Decision-accent);
+  background: linear-gradient(90deg, var(--Decision-accent-soft) 0%, var(--Decision-surface) 12%);
 }
 .insight-card[data-type="reflection"] {
-  border-left: 4px solid var(--decisio-warning);
-  background: linear-gradient(90deg, var(--decisio-warning-soft) 0%, var(--decisio-surface) 12%);
+  border-left: 4px solid var(--Decision-warning);
+  background: linear-gradient(90deg, var(--Decision-warning-soft) 0%, var(--Decision-surface) 12%);
 }
 
 .insight-title {
   margin: 0 0 0.5rem;
   font-size: 1rem;
   font-weight: 600;
-  color: var(--decisio-text);
+  color: var(--Decision-text);
 }
 
 .insight-desc {
   margin: 0;
   font-size: 0.9375rem;
-  color: var(--decisio-text-muted);
+  color: var(--Decision-text-muted);
   line-height: 1.55;
 }

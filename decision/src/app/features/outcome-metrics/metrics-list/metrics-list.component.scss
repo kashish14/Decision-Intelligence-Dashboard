@@ -15,14 +15,14 @@
   margin: 0 0 0.25rem;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--decisio-text);
+  color: var(--Decision-text);
   letter-spacing: -0.02em;
 }
 
 .page-subtitle {
   margin: 0;
   font-size: 0.9375rem;
-  color: var(--decisio-text-muted);
+  color: var(--Decision-text-muted);
   line-height: 1.5;
 }
 
@@ -30,7 +30,7 @@
   padding: 0.6rem 1.25rem;
   font-size: 0.9375rem;
   font-weight: 600;
-  border-radius: var(--decisio-radius-sm);
+  border-radius: var(--Decision-radius-sm);
   border: none;
   cursor: pointer;
   font-family: inherit;
@@ -38,31 +38,31 @@
 }
 
 .btn-primary {
-  background: var(--decisio-accent);
+  background: var(--Decision-accent);
   color: #fff;
   box-shadow: 0 2px 6px rgba(79, 70, 229, 0.3);
 }
 
 .btn-primary:hover {
-  background: var(--decisio-accent-hover);
+  background: var(--Decision-accent-hover);
   transform: translateY(-1px);
 }
 
 .list { display: flex; flex-direction: column; gap: 1rem; }
 
 .card {
-  background: var(--decisio-surface);
-  border: 1px solid var(--decisio-border);
-  border-radius: var(--decisio-radius);
+  background: var(--Decision-surface);
+  border: 1px solid var(--Decision-border);
+  border-radius: var(--Decision-radius);
   padding: 1.5rem;
-  box-shadow: var(--decisio-shadow);
+  box-shadow: var(--Decision-shadow);
   cursor: pointer;
-  border-left: 4px solid var(--decisio-info);
+  border-left: 4px solid var(--Decision-info);
   transition: box-shadow 0.2s ease, transform 0.15s ease;
 }
 
 .card:hover {
-  box-shadow: var(--decisio-shadow-md);
+  box-shadow: var(--Decision-shadow-md);
   border-color: rgba(2, 132, 199, 0.5);
   transform: translateY(-2px);
 }
@@ -77,10 +77,10 @@
   border-radius: 4px;
   margin-bottom: 0.75rem;
   background: #dbeafe;
-  color: var(--decisio-info);
+  color: var(--Decision-info);
 }
 
-.card-title { margin: 0 0 0.35rem; font-size: 1.0625rem; font-weight: 600; color: var(--decisio-text); line-height: 1.35; }
-.card-meta { margin: 0 0 0.5rem; font-size: 0.8125rem; color: var(--decisio-text-muted); }
-.card-desc { margin: 0 0 0.75rem; font-size: 0.875rem; color: var(--decisio-text-muted); line-height: 1.5; }
-.muted { margin: 0; font-size: 0.875rem; color: var(--decisio-text-muted); }
+.card-title { margin: 0 0 0.35rem; font-size: 1.0625rem; font-weight: 600; color: var(--Decision-text); line-height: 1.35; }
+.card-meta { margin: 0 0 0.5rem; font-size: 0.8125rem; color: var(--Decision-text-muted); }
+.card-desc { margin: 0 0 0.75rem; font-size: 0.875rem; color: var(--Decision-text-muted); line-height: 1.5; }
+.muted { margin: 0; font-size: 0.875rem; color: var(--Decision-text-muted); }
